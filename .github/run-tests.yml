@@ -8,3 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: echo "Hello World"
+      - uses: actions/checkout@v2
+        with:
+          ref: 'feat/pr-test'
+      - run: |
+          git merge origin/feat/pr-test-merge
+          git push origin
