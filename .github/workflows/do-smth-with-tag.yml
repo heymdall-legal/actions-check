@@ -1,0 +1,12 @@
+name: React to tag
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I am running because there is new tag!"
